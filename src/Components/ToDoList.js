@@ -1,16 +1,21 @@
-import React, { Components } from "react";
+import React from 'react';
 
-class ToDoList extends Components {
-  render() {
-    return (
-      <div className="MainToDoList">
-        <form>
-          <input placeholder="enter task" />
-          <button type="submit">submit</button>
-        </form>
-      </div>
-    );
-  }
+
+
+const ToDoList = ({ task }) => {
+  return (
+    <div >
+      <ul>
+
+        <li> 
+          <input type ="checkbox"/>
+          <p>{task}</p>
+          <button  > Delete Task </button>
+          <button>Edit Task</button>
+        </li>
+
+      </ul>
+    </div>
+  )
 }
-
 export default ToDoList;
