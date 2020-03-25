@@ -1,20 +1,23 @@
 import React from "react";
-
+import '../App.css'
+import Todo from '../Todo.png'
 
 const ToDoInput = ({ handleChange, item, AddItem }) => {
   return (
     <div>
+     <img className="pic-todo" alt="Todo" src={Todo}/>
      
-      <h1>TODO List</h1>
-      <form >
+      <form className ="Todoinput">
+
+      
         <input
-          
+          className="inputtask"
           onChange={handleChange}
           type="text"
           value={item}
           placeholder="Add Task"
         />
-        <button  onClick={AddItem}>
+        <button className="Addbtn" onClick={AddItem}>
           Add item
         </button>
       </form>

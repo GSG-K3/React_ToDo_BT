@@ -1,17 +1,17 @@
 import React from 'react';
-
+import '../App.css'
 
 
 const ToDoList = ({ task }) => {
   return (
-    <div >
+    <div className="List">
       <ul>
-
+ 
         <li> 
-          <input type ="checkbox"/>
-          <p>{task}</p>
-          <button  > Delete Task </button>
-          <button>Edit Task</button>
+          <input className="checkbox" type ="checkbox"/>
+          <p className="task">{task}</p>
+          <button className="deletebtn" > Delete Task  </button>
+          <button className="editbtn">Edit Task</button>
         </li>
 
       </ul>
