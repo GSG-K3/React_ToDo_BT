@@ -30,9 +30,13 @@ handleChange = e => {
     )
 }
 
-// DeleteItem = deletetask =>{
-//   this.state.list.filter(deletetask.item)
-// }
+DeleteItem = deletetask =>{
+  
+  const listitem = this.state.list.filter(e=>{
+  return e.item !== deletetask
+  })
+  this.setState({list:listitem})
+}
 
  
 
@@ -45,10 +49,11 @@ handleChange = e => {
           AddItem={this.AddItem}
           handleChange={this.handleChange} />
 
-        {this.state.list.map((task) => (
+        {this.state.list.map((task , key) => (
           <ToDoList
             
             task={task.item}
+            id ={key}
             deletetask ={this.DeleteItem}
           />
         ))}
