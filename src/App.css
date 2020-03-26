@@ -36,3 +36,94 @@
     transform: rotate(360deg);
   }
 }
+
+.pic-todo{
+  display: flex;
+  justify-content: center;
+  margin-left: 450px;
+  height: 200px;
+  width: 460px;
+  
+  
+}
+.Todoinput{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  
+ 
+  
+}
+.inputtask{
+  border: 1px solidr rgb(64, 167, 141);
+  width: 355px;
+  height: 40px;
+  
+}
+.Addbtn{
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+  border: none;
+	background: rgb(64, 167, 141);
+	color: #fff;
+  font-size: 15px;
+  margin-right: 90px;
+  
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  
+}
+.List{
+  justify-content: center;
+ width: 70%;
+}
+ul{
+  list-style: none;
+}
+.checkbox{
+  margin-top: 20px;
+  border-radius: 5px;
+ margin-left: 200px;
+}
+
+
+.task{
+  margin-left: 15px;
+ 
+}
+
+.deletebtn{
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+border: none;
+	background: rgb(64, 167, 141);
+	color: #fff;
+	font-size: 15px;
+}
+
+.editbtn{
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+border: none;
+	background: rgb(64, 167, 141);
+	color: #fff;
+	font-size: 17px;
+}
+
+ul li:hover{
+  background-color: rgba(223, 225, 238, 0.596);
+}
+
+::placeholder { 
+  font-size: 15px;
+  text-align: center;
+  color:rgb(64, 167, 141);
+  opacity: 1; 
+}

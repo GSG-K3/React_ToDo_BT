@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import ToDoList from './Components/ToDoList'
 import ToDoInput from './Components/ToDoInput'
@@ -17,6 +17,7 @@ state = {
 
 AddItem = e => {
   e.preventDefault()
+
   this.setState(({ list, item }) => ({
     list: [...list, { item }],
     item: ""
@@ -24,17 +25,21 @@ AddItem = e => {
 }
 
 handleChange = e => {
-  this.setState({ item: e.target.value })
+  this.setState(
+    { item: e.target.value }
+    )
 }
 
-
+// DeleteItem = deletetask =>{
+//   this.state.list.filter(deletetask.item)
+// }
 
  
 
   render(){
     return (
       <div >
-        
+        <div></div>
         <ToDoInput
           item={this.state.item}
           AddItem={this.AddItem}
@@ -44,7 +49,7 @@ handleChange = e => {
           <ToDoList
             
             task={task.item}
-            
+            deletetask ={this.DeleteItem}
           />
         ))}
 
