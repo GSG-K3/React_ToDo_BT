@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './App.css';
-import ToDoList from './Components/ToDoList'
-import ToDoInput from './Components/ToDoInput'
-
+import "./App.css";
+import ToDoList from "./Components/ToDoList";
+import ToDoInput from "./Components/ToDoInput";
 
 
 
 class App extends Component {
+  state = {
+    list: [],
+    item: ""
+  }
 
 
-state = {
-  list: [], 
-  item: ""
-}
+AddItem = (e) => {
+  e.preventDefault();
 
-AddItem = e => {
-  e.preventDefault()
 
   this.setState(({ list, item }) => ({
     list: [...list, { item }],
     item: ""
-  }))
-}
+  }));
+};
 
 handleChange = e => {
   this.setState(
@@ -40,14 +39,16 @@ DeleteItem = deletetask =>{
 
  
 
-  render(){
+  render()
+   {
     return (
-      <div >
-        <div></div>
+      <div>
+       
         <ToDoInput
           item={this.state.item}
           AddItem={this.AddItem}
-          handleChange={this.handleChange} />
+          handleChange={this.handleChange}
+        />
 
         {this.state.list.map((task , key) => (
           <ToDoList
@@ -57,15 +58,10 @@ DeleteItem = deletetask =>{
             deletetask ={this.DeleteItem}
           />
         ))}
-
-      
       </div>
-    );
-
-  }
-
-
-
+    )
+  
+}
 }
 
 export default App;
