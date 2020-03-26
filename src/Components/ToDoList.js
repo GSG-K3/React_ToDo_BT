@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css'
 
 
-const ToDoList = ({ task ,removeItem}) => {
+const ToDoList = ({ task ,id, deletetask }) => {
   return (
     <div className="List">
       <ul>
@@ -10,7 +10,7 @@ const ToDoList = ({ task ,removeItem}) => {
         <li> 
           <input className="checkbox" type ="checkbox"/>
           <p className="task">{task}</p>
-          <button className="deletebtn" onClick={removeItem} > Delete Task  </button>
+          <button className="deletebtn" id={id} onClick ={()=>deletetask(task)} > Delete Task  </button>
           <button className="editbtn">Edit Task</button>
         </li>
 
